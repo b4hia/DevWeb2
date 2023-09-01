@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex01</title>
+</head>
+<body>
+    <script>
+        var nome = prompt('Qual é o seu nome?')
+        var altura = prompt('Qual é a sua altura em cm?')
+        var peso = prompt('Qual é o seu peso?')
+        var msg = msg
+// Função que calcula o IMC e a classficação
+        function IMC(altura, peso) {
+            let msg;
+            let imc = peso / (altura / 100) ** 2;
+            if (imc < 16) {
+                return msg = "Baixo peso muito grave";
+            }
+            else if (imc >= 16 && imc <= 16.99) {
+                return msg = "Baixo peso grave";
+            }
+            else if (imc >= 17 && imc <= 18.49) {
+                msg = "Baixo peso";
+            }
+            else if (imc >= 18.50 && imc <= 24.99) {
+                msg = "Peso normal";
+            }
+            else if (imc >= 25 && imc <= 29.99) {
+                msg = "Sobrepeso";
+            }
+            else if (imc >= 30 && imc <= 34.99) {
+                msg = "Obesidade grau I";
+            }
+            else if (imc >= 35 && imc <= 39.99) {
+                msg = "Obesidade grau II";
+            }
+            else if (imc >= 40) {
+                msg = "Obesidade grau III";
+            }
+            return [Math.round(peso / (altura / 100) ** 2), msg];
+        }
+        document.write(`${nome} você tem ${altura}m, com um peso de ${peso}kg, sua situação é: ${IMC}`)
+
+    </script>
+</body>
+</html>
