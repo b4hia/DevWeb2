@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 1</title>
+    <style>
+        body{
+            font: 20pt normal;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        let nome = prompt(`Qual o seu nome?`)
+        let altura = prompt(`Qual a sua altura em cm?`)
+        let peso = prompt(`Qual o seu peso?`)
+        altura = parseInt(altura)
+        peso = parseInt(peso)
+        var M = peso/(altura/100) ** 2
+        if(M < 16){
+            document.write(`${nome}, você possui  indice  de  massa  corporal  igual  a ${M}, sendo classificado como Baixo peso muito grave`)
+        }
+        else if(M >= 16 && M <= 16.99){
+            document.write(`${nome}, você possui  indice  de  massa  corporal  igual  a ${M}, sendo classificado comoBaixo peso grave`)
+        }
+        else if(M >= 17 && M <= 18.49){
+            document.write(`${nome}, você possui  indice  de  massa  corporal  igual  a ${M}, sendo classificado como Baixo peso`)
+        }
+        else if(M >= 18.50 && M <= 24.99){
+            document.write(`${nome}, você possui  indice  de  massa  corporal  igual  a ${M}, sendo classificado como Peso normal`)
+        }
+        else if(M >= 25 && M <= 29.99){
+            document.write(`${nome}, você possui  indice  de  massa  corporal  igual  a ${M}, sendo classificado como Sobrepeso`)
+        }
+        else if(M >= 30 && M <= 34.99){
+            document.write(`${nome}, você possui  indice  de  massa  corporal  igual  a ${M}, sendo classificado como Obesidade Grau I`)
+        }
+        else if(M >= 35 && M <= 39.99){
+            document.write(`${nome}, você possui  indice  de  massa  corporal  igual  a ${M}, sendo classificado como Obesidade Grau II`)
+        }
+        else if(M >= 40){
+            document.write(`${nome}, você possui  indice  de  massa  corporal  igual  a ${M}, sendo classificado como Obesidade Grau III`)
+        }
+    </script>
+</body>
+</html>
